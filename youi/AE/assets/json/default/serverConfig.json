@@ -1,7 +1,0 @@
-{
-  "startImmediately" : false,
-  "serverVersionOverride": "",
-  "exportHandler" : {	
-    "exporterType" : "cloudSceneTree"
-  }
-}
