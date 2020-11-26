@@ -3,9 +3,15 @@
  */
 import React, { Component } from "react";
 import App from './src/containers/App';
+import { Provider } from 'react-redux';
+
 export default class YiReactApp extends Component {
   render() {
-    return <App />
+    return (
+      <Provider store={store} >
+        <App />
+      </Provider>      
+    )    
   }
 }
 
