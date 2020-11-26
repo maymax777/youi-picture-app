@@ -1,2 +1,4 @@
 {
+  "inactivityDisconnect": false,
+  "inactivitySeconds": 120
 }
