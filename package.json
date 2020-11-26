@@ -7,16 +7,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "@youi/react-native-youi": "6.1.0",
     "@youi/babel-plugin-react-native-youi": "1.0.4",
+    "@youi/react-native-youi": "6.1.0",
     "react": "16.8.6",
-    "react-native": "0.60.6"
+    "react-native": "0.60.6",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/runtime": "^7.6.2",
-    "metro-react-native-babel-preset": "0.57.0",
     "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "0.57.0",
     "react-test-renderer": "16.8.6"
   },
   "jest": {
