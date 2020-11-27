@@ -6,8 +6,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
-        margin: 5,
-        backgroundColor: 'gray'        
+        margin: 5        
     },
     searchInput: {
         height: 25,
