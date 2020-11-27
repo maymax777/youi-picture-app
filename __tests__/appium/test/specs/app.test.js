@@ -1,7 +1,6 @@
 // https://www.chaijs.com/
-import { expect } from 'chai';  // Using Expect style.
-import AppScreen from '../pageobjects/app.page'
-
+import { expect } from 'chai'; // Using Expect style.
+import AppScreen from '../pageobjects/app.page';
 
 browser.setImplicitTimeout(30000);
 
@@ -12,7 +11,8 @@ describe('ReactTemplateProject', () => {
       context('when in App', () => {
         it('displays logo image', () => {
           // Wait until the screen is loaded and displayed.
-          expect(AppScreen.react_image_node.getAttribute("isdisplayed")).to.be.true;
+          expect(AppScreen.react_image_node.getAttribute('isdisplayed')).to.be
+            .true;
         });
       });
     });

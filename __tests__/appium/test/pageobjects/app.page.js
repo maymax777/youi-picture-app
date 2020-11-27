@@ -6,11 +6,10 @@ import Page from './page';
 // This class contains Page Object Locators and methods for the Screen.
 // It inherits from Page.
 class AppScreen extends Page {
-
   /**
-  * define elements
-  */
-  
+   * define elements
+   */
+
   // '$' is equivalent to 'browser.element'
   // http://webdriver.io/api/utility/$.html
   // http://webdriver.io/guide/usage/selectors.html
@@ -18,8 +17,9 @@ class AppScreen extends Page {
   // To search for class name: $('class name:mySelector')
   // To search for id: $('id:mySelector')
 
-  get react_image_node()  { return $("~React:RCTImageView:3"); }
-
+  get react_image_node() {
+    return $('~React:RCTImageView:3');
+  }
 }
 
-export default new AppScreen()
+export default new AppScreen();
