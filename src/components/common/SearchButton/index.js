@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
+import styles from './style';
 
-const SearchButton = () => {
+const SearchButton = ({ handleOnPress }) => {
   return (
-    <View>
-      <Text>SearchButton</Text>
-    </View>
+    <TouchableOpacity style={styles.button} onPress={handleOnPress}>
+      <Text> Search </Text>
+    </TouchableOpacity>
   );
 };
 
