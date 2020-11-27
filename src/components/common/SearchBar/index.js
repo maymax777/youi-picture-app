@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
         width: 250,
         borderStyle: 'solid',
         borderWidth: 2,
-        backgroundColor: 'lightgray',
-        borderColor: 'gray',
+        // backgroundColor: 'lightgray',
+        // borderColor: 'gray',
         borderRadius: '20'
     }    
 });
@@ -27,6 +27,7 @@ function SearchBar() {
     return (
         <View style={styles.container}>
             <TextInput 
+                placeholder='Search...'
                 style={styles.searchInput}
                 onChange={handleInputChange}
                 onFocus={handleInputFocus}
