@@ -1,3 +1,22 @@
 {
-  "plugins": ["module:@youi/babel-plugin-react-native-youi"]
+  "presets": [
+    "module:metro-react-native-babel-preset",
+    "module:react-native-dotenv"
+  ],
+  "plugins": [
+    ["module:@youi/babel-plugin-react-native-youi"],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@components": "./src/components",
+          "@containers": "./src/containers",
+          "@redux": "./src/redux",
+          "@services": "./src/services",
+          "@utils": "./src/utils"
+        }
+      }
+    ]
+  ]
 }
