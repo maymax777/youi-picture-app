@@ -10,7 +10,12 @@ const styles = StyleSheet.create({
     },
     searchInput: {
         height: 25,
-        width: 250
+        width: 250,
+        borderStyle: 'solid',
+        borderWidth: 2,
+        backgroundColor: 'lightgray',
+        borderColor: 'gray',
+        borderRadius: '20'
     }    
 });
 
