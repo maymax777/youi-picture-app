@@ -10,23 +10,24 @@ const styles = StyleSheet.create({
     },
     searchInput: {
         height: 25,
-        width: 250,
-        borderStyle: 'solid',
-        borderWidth: 2,
-        backgroundColor: 'lightgray',
-        borderColor: 'gray',
-        borderRadius: '20'
+        width: 250,        
     }    
 });
 
 function SearchBar() {
-    const handleInputChange = () => {}
+    const handleInputChange = () => {console.log('handleInputChange')}
+    const handleInputFocus = () => {console.log('handleInputFocus')}
+    const handleInputBlur = () => {console.log('handleInputBlur')}    
 
     return (
         <View style={styles.container}>
             <TextInput 
-                style={styles.searchInput}
+                placeholder='Search...'
+                style={styles.searchInput}                
+                underlineColorAndroid={true}
                 onChange={handleInputChange}
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
             />
         </View>
     )
