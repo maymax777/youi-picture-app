@@ -11,24 +11,26 @@ const styles = StyleSheet.create({
     searchInput: {
         height: 25,
         width: 250,
-        borderStyle: 'solid',
-        borderWidth: 2,
+        // borderStyle: 'solid',
+        // borderWidth: 2,
         // backgroundColor: 'lightgray',
         // borderColor: 'gray',
-        borderRadius: '20'
+        // borderRadius: '20'
     }    
 });
 
 function SearchBar() {
-    const handleInputChange = () => {}
-    const handleInputFocus = () => {}
-    const handleInputBlur = () => {}    
+    const handleInputChange = () => {console.log('handleInputChange')}
+    const handleInputFocus = () => {console.log('handleInputFocus')}
+    const handleInputBlur = () => {console.log('handleInputBlur')}    
 
     return (
         <View style={styles.container}>
             <TextInput 
                 placeholder='Search...'
                 style={styles.searchInput}
+                inlineImageLeft='search_icon'                
+                underlineColorAndroid={true}
                 onChange={handleInputChange}
                 onFocus={handleInputFocus}
                 onBlur={handleInputBlur}
