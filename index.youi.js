@@ -1,6 +1,7 @@
 /**
  * Basic You.i RN app
  */
+import { AppRegistry } from 'react-native';
 import React, { Component } from "react";
 import App from './src/containers/App';
 import { Provider } from 'react-redux';
