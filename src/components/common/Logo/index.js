@@ -1,12 +1,6 @@
 import React from 'react';
-import { Image, StyleSheet } from 'react-native';
-
-const styles = StyleSheet.create({
-    image: {
-        height: 96,
-        width: 96,      
-    }
-});
+import { Image } from 'react-native';
+import styles from './style';
 
 function Logo() {
     return (
