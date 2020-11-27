@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
     image: {
         height: 96,
         width: 96,      
-        backgroundColor:'green'
     }
 });
 
