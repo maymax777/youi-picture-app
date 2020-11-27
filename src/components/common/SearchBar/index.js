@@ -10,12 +10,7 @@ const styles = StyleSheet.create({
     },
     searchInput: {
         height: 25,
-        width: 250,
-        // borderStyle: 'solid',
-        // borderWidth: 2,
-        // backgroundColor: 'lightgray',
-        // borderColor: 'gray',
-        // borderRadius: '20'
+        width: 250,        
     }    
 });
 
@@ -28,8 +23,7 @@ function SearchBar() {
         <View style={styles.container}>
             <TextInput 
                 placeholder='Search...'
-                style={styles.searchInput}
-                inlineImageLeft='search_icon'                
+                style={styles.searchInput}                
                 underlineColorAndroid={true}
                 onChange={handleInputChange}
                 onFocus={handleInputFocus}
