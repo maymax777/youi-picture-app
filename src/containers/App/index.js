@@ -1,17 +1,12 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#e6e7e7",
-        flex: 1
-    }
-});
+import Logo from '../../components/common/Logo';
+import styles from './style';
 
 function App() {
     return (
         <View style={styles.container}>
-            
+            <Logo />
         </View>
     )
 }
