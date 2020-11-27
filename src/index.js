@@ -1,3 +1,0 @@
-/**
- * Beginning of picture app
- */
