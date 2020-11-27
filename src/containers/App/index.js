@@ -5,12 +5,12 @@ import SearchBar from '../../components/common/SearchBar';
 import styles from './style';
 
 function App() {
-    return (
-        <View style={styles.container}>
-            <Logo />
-            <SearchBar />
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <Logo />
+      <SearchBar />
+    </View>
+  );
 }
 
 export default App;
