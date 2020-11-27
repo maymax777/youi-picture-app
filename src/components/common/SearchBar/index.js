@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, TextInput } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -8,13 +8,22 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 5,
         backgroundColor: 'gray'        
-    }
+    },
+    searchInput: {
+        height: 25,
+        width: 250
+    }    
 });
 
 function SearchBar() {
+    const handleInputChange = () => {}
+
     return (
         <View style={styles.container}>
-            
+            <TextInput 
+                style={styles.searchInput}
+                onChange={handleInputChange}
+            />
         </View>
     )
 }
