@@ -21,12 +21,16 @@ const styles = StyleSheet.create({
 
 function SearchBar() {
     const handleInputChange = () => {}
+    const handleInputFocus = () => {}
+    const handleInputBlur = () => {}    
 
     return (
         <View style={styles.container}>
             <TextInput 
                 style={styles.searchInput}
                 onChange={handleInputChange}
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
             />
         </View>
     )
