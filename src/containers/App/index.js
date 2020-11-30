@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Logo from '@components/common/Logo';
 import SearchBar from '@components/common/SearchBar';
+import SearchButton from '@components/common/SearchButton';
 import styles from './style';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <View style={styles.container}>
       <Logo />
       <SearchBar />
+      <SearchButton />
     </View>
   );
 }
