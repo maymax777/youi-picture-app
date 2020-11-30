@@ -5,7 +5,7 @@ import styles from './style';
 const SearchButton = ({ handleOnPress }) => {
   return (
     <TouchableOpacity style={styles.button} onPress={handleOnPress}>
-      <Text> Search </Text>
+      <Text style={styles.buttonText}> Search </Text>
     </TouchableOpacity>
   );
 };
