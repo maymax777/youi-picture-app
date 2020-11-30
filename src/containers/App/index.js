@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
 import Logo from '@components/common/Logo';
 import SearchBar from '@components/common/SearchBar';
 import SearchButton from '@components/common/SearchButton';
