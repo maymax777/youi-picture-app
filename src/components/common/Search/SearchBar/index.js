@@ -2,9 +2,9 @@ import React from 'react';
 import { View, TextInput } from 'react-native';
 import styles from './style';
 
-function SearchBar() {
-  const handleInputChange = () => {
-    console.log('handleInputChange');
+function SearchBar({ handleKeyword }) {
+  const handleInputChange = (text) => {
+    handleKeyword(text);
   };
   const handleInputFocus = () => {
     console.log('handleInputFocus');
@@ -19,7 +19,7 @@ function SearchBar() {
         placeholder="Search..."
         style={styles.searchInput}
         underlineColorAndroid={true}
-        onChange={handleInputChange}
+        onChangeText={handleInputChange}
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
       />
