@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { View } from 'react-native';
+import { useDispatch } from 'react-redux';
 import SearchBar from '@components/common/Search/SearchBar';
 import SearchButton from '@components/common/Search/SearchButton';
+import unsplashActions from '@redux/unsplash/actions';
 import styles from './style';
 
 function Search() {
+  const dispatch = useDispatch();
   const [keyword, setKeyword] = useState('');
   const handleSearchButton = () => {
-    console.log('keyword: ', keyword);
+    dispatch({ type: unsplashActions.SEARCH_IMAGE, payload: keyword });
   };
 
   return (
