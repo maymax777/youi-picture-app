@@ -15,4 +15,3 @@ function unsplashReducer(state = initState, action) {
 }
 
 export default unsplashReducer;
-export { searchImages };
