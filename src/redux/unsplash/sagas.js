@@ -2,6 +2,7 @@ import { all, put, takeEvery } from 'redux-saga/effects';
 import actions from './actions';
 
 export function* SEARCH({ payload }) {
+  console.log('here: ', payload);
   yield put({
     type: actions.SET_STATE,
     payload,
