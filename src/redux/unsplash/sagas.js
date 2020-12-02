@@ -1,6 +1,4 @@
 import { all, put, takeEvery } from 'redux-saga/effects';
-
-import { put } from 'redux-saga/effects';
 import actions from './actions';
 
 export function* SEARCH({ payload }) {
