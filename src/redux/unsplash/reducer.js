@@ -1,5 +1,4 @@
 import actions from './actions';
-import Unsplash, { toJson } from 'unsplash-js';
 
 const initState = {
   images: [],
