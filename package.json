@@ -7,6 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/native": "^5.8.10",
+    "@react-navigation/stack": "^5.12.8",
     "@youi/babel-plugin-react-native-youi": "1.0.4",
     "@youi/react-native-youi": "6.1.0",
     "react": "16.8.6",
