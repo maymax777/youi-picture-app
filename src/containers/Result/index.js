@@ -19,10 +19,19 @@ const Result = () => {
       </ImageBackground>
     </View>;
   };
+  const getItem = (item) => item;
+  const getItemCount = () => (images || []).length;
+  const keyExtractor = (item) => item.key;
 
   return (
     <SafeAreaView>
-      <VirtualizedList data={images} renderItem={renderItem} />
+      <VirtualizedList
+        data={images}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        getItemCount={getItemCount}
+        getItem={getItem}
+      />
     </SafeAreaView>
   );
 };
