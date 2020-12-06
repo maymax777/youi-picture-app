@@ -10,7 +10,7 @@ export const searchImages = async (keyword) => {
     })
       .then((res) => res.json())
       .then((json) => {
-        const iamges = json.results.map((result) => result.urls.thumb);
+        const images = json.results.map((result) => result.urls.thumb);
         resolve(images);
       })
       .catch((error) => {

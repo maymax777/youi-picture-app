@@ -3,12 +3,11 @@ import actions from './actions';
 import * as UnsplashApi from '@services/unsplash';
 
 export function* SEARCH({ payload }) {
-  const response = yield call(UnsplashApi.searchImages, payload.keyword);
-  console.log('here2', response);
-  // yield put({
-  //   type: actions.SET_DATA,
-  //   payload,
-  // });
+  const images = yield call(UnsplashApi.searchImages, payload.keyword);
+  yield put({
+    type: actions.SET_DATA,
+    payload: images,
+  });
 }
 
 export default function* rootSaga() {
