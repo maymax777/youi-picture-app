@@ -9,7 +9,10 @@ import Navigator from '@navigation';
 
 export default class YiReactApp extends Component {
   render() {
-    return <Provider store={store}>{/* <App /> */}</Provider>;
+    return;
+    <Provider store={store}>
+      <Navigator />
+    </Provider>;
   }
 }
 
