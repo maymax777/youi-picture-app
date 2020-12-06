@@ -1,16 +1,14 @@
 import { all, call, put, takeEvery } from 'redux-saga/effects';
 import actions from './actions';
-import { searchImages } from '@services/unsplash';
+import * as UnsplashApi from '@services/unsplash';
 
-export function* SEARCH(payload) {
-  console.log('here', payload);
-  // const {keyword} = payload;
-  // const response = yield call(unsplashApi.searchImages, keyword);
-  // console.log("here", response)
-  yield put({
-    type: actions.SEARCH_IMAGE,
-    payload,
-  });
+export function* SEARCH({ payload }) {
+  const response = yield call(UnsplashApi.searchImages, payload.keyword);
+  console.log('here2', response);
+  // yield put({
+  //   type: actions.SET_DATA,
+  //   payload,
+  // });
 }
 
 export default function* rootSaga() {
