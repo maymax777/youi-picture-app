@@ -1,5 +1,5 @@
 const actions = {
-  SET_STATE: 'unsplash/SET_STATE',
+  SET_DATA: 'unsplash/SET_DATA',
   SEARCH_IMAGE: 'unsplash/SEARCH_IMAGE',
 };
 
