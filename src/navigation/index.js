@@ -1,22 +1,20 @@
-import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import App from '@containers/App';
 import Search from '@containers/Search';
-import Result from '@containers/Result';
+import Gallery from '@containers/Gallery';
 
-const RootStack = createStackNavigator({
-  App,
-  Search,
-  Result,
-});
+const Stack = createStackNavigator();
 
 function Navigator() {
   return (
     <NavigationContainer>
-      <StackActions.Navigator>
-        <RootStack />
-      </StackActions.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="App" component={App} />
+        <Stack.Screen name="Search" component={Search} />
+        <Stack.Screen name="Gallery" component={Gallery} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
