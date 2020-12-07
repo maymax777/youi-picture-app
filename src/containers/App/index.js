@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import Navigator from '../../navigation';
+import Navigator from '@navigation';
 import styles from './style';
 
 function App() {
