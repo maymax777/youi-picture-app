@@ -13,4 +13,4 @@ const rootStack = createSwitchNavigator({
 
 const AppNavigator = createAppContainer(rootStack);
 
-export default Search;
+export default AppNavigator;
