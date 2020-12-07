@@ -7,11 +7,12 @@ import Logo from '@components/common/Logo';
 import unsplashActions from '@redux/unsplash/actions';
 import styles from './style';
 
-function Search() {
+function Search({ navigation }) {
   const dispatch = useDispatch();
   const [keyword, setKeyword] = useState('');
   const handleSearchButton = () => {
     dispatch({ type: unsplashActions.SEARCH_IMAGE, payload: { keyword } });
+    navigation.navigate('Gallery');
   };
 
   return (
