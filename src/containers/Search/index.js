@@ -11,7 +11,7 @@ function Search({ navigation }) {
   const dispatch = useDispatch();
   const [keyword, setKeyword] = useState('');
   const handleSearchButton = () => {
-    dispatch({ type: unsplashActions.SEARCH_IMAGE, payload: { keyword } });
+    dispatch({ type: unsplashActions.SET_KEYWORD, payload: { keyword } });
     navigation.navigate('Gallery');
   };
 
