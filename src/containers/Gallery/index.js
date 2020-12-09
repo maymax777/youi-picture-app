@@ -1,7 +1,8 @@
 import React from 'react';
-import { SafeAreaView, ScrollView, FlatList } from 'react-native';
+import { SafeAreaView, FlatList } from 'react-native';
 import { useSelector } from 'react-redux';
 import Card from '@components/common/Card';
+import Suspense from '@components/common/Suspense';
 import styles from './style';
 import { COLUMN_SIZE } from '@utils/config';
 
@@ -14,11 +15,13 @@ const Result = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList
-        data={images}
-        renderItem={renderItem}
-        numColumns={COLUMN_SIZE}
-      />
+      <Suspense loading={loading}>
+        <FlatList
+          data={images}
+          renderItem={renderItem}
+          numColumns={COLUMN_SIZE}
+        />
+      </Suspense>
     </SafeAreaView>
   );
 };
