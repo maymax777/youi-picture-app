@@ -1,17 +1,32 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+
+const window = Dimensions.get('window');
+const RATIO = 9 / 16;
+const COLUMN_SIZE = 5;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    width: window.width / COLUMN_SIZE,
+    height: (window.width / COLUMN_SIZE) * RATIO,
+    margin: 4,
+    borderColor: 'darkgray',
+    borderRadius: 4,
+    backgroundColor: 'darkgray',
   },
   background: {
     flex: 1,
+    bprderRadius: 4,
+    width: '100%',
+    height: '100%',
     resizeMode: 'cover',
     justifyContent: 'flex-end',
   },
   title: {
     color: 'white',
-    fontSize: 24,
+    fontSize: 8,
+    textAlign: 'center',
   },
 });
+
+export default styles;
