@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { SafeAreaView, FlatList, BackHandler } from 'react-native';
 import { useSelector } from 'react-redux';
 import Card from '@components/common/Card';
+import Suspense from '@components/common/Suspense';
 import styles from './style';
 import { COLUMN_SIZE } from '@utils/config';
 
@@ -26,11 +27,13 @@ const Result = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList
-        data={images}
-        renderItem={renderItem}
-        numColumns={COLUMN_SIZE}
-      />
+      <Suspense loading={loading}>
+        <FlatList
+          data={images}
+          renderItem={renderItem}
+          numColumns={COLUMN_SIZE}
+        />
+      </Suspense>
     </SafeAreaView>
   );
 };

@@ -6,12 +6,12 @@ const styles = StyleSheet.create({
     height: 30,
     width: 120,
     borderRadius: 8,
-    backgroundColor: 'lightblue',
+    backgroundColor: '#778EC9',
     alignItems: 'center',
     justifyContent: 'center',
   },
   buttonText: {
-    color: 'darkgreen',
+    color: 'white',
   },
 });
 
