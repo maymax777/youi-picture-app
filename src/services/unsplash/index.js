@@ -1,8 +1,8 @@
-import { UNSPLASH_API_KEY } from '@utils/config';
+import { UNSPLASH_API_KEY, UNSPLASH_API_ENDPOINT } from '@utils/config';
 
 export const searchImages = async (keyword) => {
   return new Promise((resolve, reject) => {
-    fetch(`https://api.unsplash.com/search/photos?query=${keyword}`, {
+    fetch(`${UNSPLASH_API_ENDPOINT}/photos?query=${keyword}`, {
       method: 'GET',
       headers: {
         Authorization: `Client-ID ${UNSPLASH_API_KEY}`,
@@ -10,7 +10,10 @@ export const searchImages = async (keyword) => {
     })
       .then((res) => res.json())
       .then((json) => {
-        const images = json.results.map((result) => result.urls.thumb);
+        const images = json.results.map((result) => ({
+          image: result.urls.thumb,
+          title: result.alt_description,
+        }));
         resolve(images);
       })
       .catch((error) => {
