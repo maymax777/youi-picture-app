@@ -2,22 +2,21 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const window = Dimensions.get('window');
 const RATIO = 9 / 16;
-const CARD_COUNT = 5;
-
-console.log('here', window);
+const COLUMN_SIZE = 5;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: window.width / CARD_COUNT,
-    height: (window.width / CARD_COUNT) * RATIO,
-    margin: 8,
+    width: window.width / COLUMN_SIZE,
+    height: (window.width / COLUMN_SIZE) * RATIO,
+    margin: 4,
     borderColor: 'darkgray',
     borderRadius: 4,
     backgroundColor: 'darkgray',
   },
   background: {
     flex: 1,
+    bprderRadius: 4,
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: 'white',
-    fontSize: 12,
+    fontSize: 8,
     textAlign: 'center',
   },
 });

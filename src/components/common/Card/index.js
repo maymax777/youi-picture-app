@@ -6,7 +6,9 @@ const Card = ({ item }) => {
   return (
     <TouchableOpacity style={styles.container}>
       <ImageBackground source={{ uri: item.image }} style={styles.background}>
-        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.title} numberOfLines={1}>
+          {item.title}
+        </Text>
       </ImageBackground>
     </TouchableOpacity>
   );
