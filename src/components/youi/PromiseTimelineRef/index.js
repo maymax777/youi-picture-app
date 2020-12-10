@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, createRef } from 'react';
 import { TimelineRef } from '@youi/react-native-youi';
 
 class PromiseTimelineRef extends Component {
-  timelineRef = React.createRef();
+  timelineRef = createRef();
 
   componentDidMount() {
     if (this.props.autoplay) this.play();
@@ -17,7 +17,7 @@ class PromiseTimelineRef extends Component {
   render() {
     return (
       <TimelineRef
-        {...props}
+        {...this.props}
         ref={this.timelineRef}
         onCompleted={() => {
           if (this.resolve) this.resolve('onCompleted');
