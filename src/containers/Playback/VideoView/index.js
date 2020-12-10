@@ -1,12 +1,6 @@
 import React, { createRef, useEffect } from 'react';
-import {
-  Composition,
-  TimelineRef,
-  VideoRef,
-  View,
-  ButtonRef,
-  ViewRef,
-} from '@youi/react-native-youi';
+import { Composition, VideoRef } from '@youi/react-native-youi';
+import styles from '../style';
 
 function VideoView() {
   const videoPlayerRef = createRef();
@@ -16,7 +10,7 @@ function VideoView() {
   };
 
   return (
-    <Composition source="Player_Main">
+    <Composition source="Player_VideoRef" style={styles.container}>
       <VideoRef
         name="Video-Surface-View"
         source={{

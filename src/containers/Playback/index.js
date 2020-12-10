@@ -1,13 +1,18 @@
-import React, { createRef, useEffect } from 'react';
-import { View } from '@youi/react-native-youi';
+import React, { useState } from 'react';
+import { ButtonRef, View } from '@youi/react-native-youi';
 import VideoView from './VideoView';
 import PlaybackControls from './PlaybackControls';
+import Buffering from './Buffering';
+import styles from './style';
 
 function Playback() {
+  const [loading, setLoading] = useState(true);
+
   return (
-    <View style={{ flex: 1 }}>
-      <VideoView style={{ position: 'absolute' }} />
-      <PlaybackControls style={{ position: 'absolute' }} />
+    <View style={styles.container}>
+      <Buffering />
+      {/* <VideoView />
+      <PlaybackControls /> */}
     </View>
   );
 }
