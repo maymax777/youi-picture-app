@@ -1,12 +1,30 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { TimelineRef } from '@youi/react-native-youi';
 
-function PromiseTimelineRef() {
-  return (
-    <View>
-      <Text></Text>
-    </View>
-  );
+class PromiseTimelineRef extends Component {
+  timelineRef = React.createRef();
+
+  componentDidMount() {
+    if (this.props.autoplay) this.play();
+  }
+
+  play = () =>
+    new Promise((resolve) => {
+      this.resolve = resolve;
+      this.ref.play();
+    });
+
+  render() {
+    return (
+      <TimelineRef
+        {...props}
+        ref={this.timelineRef}
+        onCompleted={() => {
+          if (this.resolve) this.resolve('onCompleted');
+        }}
+      />
+    );
+  }
 }
 
 export default PromiseTimelineRef;
