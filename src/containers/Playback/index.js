@@ -1,29 +1,15 @@
 import React, { createRef, useEffect } from 'react';
-import { Composition, TimelineRef, VideoRef } from '@youi/react-native-youi';
-import { View } from 'react-native';
+import { View } from '@youi/react-native-youi';
+import VideoView from './VideoView';
+import PlaybackControls from './PlaybackControls';
 
-const Playback = () => {
-  const videoPlayerRef = createRef();
-  const onPlayerReady = () => {
-    if (videoPlayerRef.current) videoPlayerRef.current.play();
-  };
-
+function Playback() {
   return (
     <View style={{ flex: 1 }}>
-      <Composition source="Player_Main">
-        <VideoRef
-          name="Video-Surface-View"
-          source={{
-            uri:
-              'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8',
-            type: 'HLS',
-          }}
-          ref={videoPlayerRef}
-          onReady={onPlayerReady}
-        />
-      </Composition>
+      <VideoView style={{ position: 'absolute' }} />
+      <PlaybackControls style={{ position: 'absolute' }} />
     </View>
   );
-};
+}
 
 export default Playback;
