@@ -8,10 +8,11 @@ const Buffering = () => {
   const loopTimelineRef = createRef();
 
   useEffect(() => {
+    console.log('here', inTimelineRef.current);
     if (inTimelineRef.current) {
       inTimelineRef.current.play();
     }
-  });
+  }, []);
 
   return (
     <Composition source="Player_Buffering" style={styles.container}>

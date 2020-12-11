@@ -5,6 +5,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
+    backgroundColor: '#3D444F',
+    width: '100%',
+    height: '100%',
+    paddingVertical: 10,
   },
 });
 

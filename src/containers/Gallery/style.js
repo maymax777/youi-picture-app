@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#5D544F',
     alignSelf: 'stretch',
     borderRadius: 6,
+    padding: 4,
+    margin: 4,
   },
 });
 

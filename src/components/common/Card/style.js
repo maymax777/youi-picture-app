@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
     borderColor: 'darkgray',
     borderRadius: 4,
     backgroundColor: 'darkgray',
+    padding: 2,
   },
   background: {
     flex: 1,
-    bprderRadius: 4,
+    borderRadius: 4,
     width: '100%',
     height: '100%',
     resizeMode: 'cover',
