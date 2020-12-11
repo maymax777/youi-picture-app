@@ -6,6 +6,7 @@ import styles from './style';
 
 function Playback({ navigation }) {
   const [loading, setLoading] = useState(true);
+  const [currentTime, setCurrentTime] = useState('--:--');
   const keys = ['Space', 'Play', 'MediaPlay', 'MediaPlayPause'];
 
   useEffect(() => {
@@ -21,8 +22,8 @@ function Playback({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <VideoView />
-      <PlaybackControls navigation={navigation} />
+      <VideoView setCurrentTime={setCurrentTime} />
+      <PlaybackControls navigation={navigation} currentTime={currentTime} />
     </View>
   );
 }

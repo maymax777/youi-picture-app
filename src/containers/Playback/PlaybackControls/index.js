@@ -8,7 +8,7 @@ import Time from './Time';
 
 const TIMELINE_VISIBLE_LIMIT = 15000;
 
-function PlaybackControls({ navigation }) {
+function PlaybackControls({ navigation, currentTime }) {
   const inTimelineRef = createRef();
   const outTimelineRef = createRef();
 
@@ -16,7 +16,8 @@ function PlaybackControls({ navigation }) {
     if (inTimelineRef.current) {
       inTimelineRef.current.play();
     }
-  });
+    console.log('here.currentTime', currentTime);
+  }, []);
 
   /**
    * Auto hide timeline bar after some seconds
@@ -27,6 +28,7 @@ function PlaybackControls({ navigation }) {
       if (outTimelineRef.current) outTimelineRef.current.play();
     }, TIMELINE_VISIBLE_LIMIT);
   };
+
   return (
     <Composition
       source="Player_Playback-Controls"
@@ -40,7 +42,7 @@ function PlaybackControls({ navigation }) {
       <TimelineRef name="Out" ref={outTimelineRef} />
 
       <ButtonBack navigation={navigation} />
-      <Time />
+      <Time currentTime={currentTime} />
       <Arrow />
       <PlayPause />
     </Composition>
