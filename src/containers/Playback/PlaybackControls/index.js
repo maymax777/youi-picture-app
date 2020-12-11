@@ -8,7 +8,7 @@ import Time from './Time';
 
 const TIMELINE_VISIBLE_LIMIT = 15000;
 
-function PlaybackControls() {
+function PlaybackControls({ navigation }) {
   const inTimelineRef = createRef();
   const outTimelineRef = createRef();
 
@@ -39,7 +39,7 @@ function PlaybackControls() {
       />
       <TimelineRef name="Out" ref={outTimelineRef} />
 
-      <ButtonBack />
+      <ButtonBack navigation={navigation} />
       <Time />
       <Arrow />
       <PlayPause />

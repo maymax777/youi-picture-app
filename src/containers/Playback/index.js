@@ -4,7 +4,7 @@ import VideoView from './VideoView';
 import PlaybackControls from './PlaybackControls';
 import styles from './style';
 
-function Playback() {
+function Playback({ navigation }) {
   const [loading, setLoading] = useState(true);
   const keys = ['Space', 'Play', 'MediaPlay', 'MediaPlayPause'];
 
@@ -22,7 +22,7 @@ function Playback() {
   return (
     <View style={styles.container}>
       <VideoView />
-      <PlaybackControls />
+      <PlaybackControls navigation={navigation} />
     </View>
   );
 }
