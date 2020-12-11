@@ -8,6 +8,7 @@ import {
 import styles from '../style';
 import ButtonBack from './ButtonBack';
 import Arrow from './Arrow';
+import PlayPause from './PlayPause';
 
 const TIMELINE_VISIBLE_LIMIT = 15000;
 
@@ -43,6 +44,7 @@ function PlaybackControls() {
       <TimelineRef name="Out" ref={outTimelineRef} />
       <ButtonBack />
       <Arrow />
+      <PlayPause />
     </Composition>
   );
 }
