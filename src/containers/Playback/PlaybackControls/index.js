@@ -1,6 +1,12 @@
 import React, { createRef, useEffect } from 'react';
-import { Composition, TimelineRef, ViewRef } from '@youi/react-native-youi';
+import {
+  ButtonRef,
+  Composition,
+  TimelineRef,
+  ViewRef,
+} from '@youi/react-native-youi';
 import styles from '../style';
+import ButtonBack from './ButtonBack';
 
 const TIMELINE_VISIBLE_LIMIT = 15000;
 
@@ -9,7 +15,9 @@ function PlaybackControls() {
   const outTimelineRef = createRef();
 
   useEffect(() => {
-    if (inTimelineRef.current) inTimelineRef.current.play();
+    if (inTimelineRef.current) {
+      inTimelineRef.current.play();
+    }
   });
 
   /**
@@ -32,7 +40,7 @@ function PlaybackControls() {
         onCompleted={inTimelineCompleted}
       />
       <TimelineRef name="Out" ref={outTimelineRef} />
-      <ViewRef name="Btn-Back-Container" />
+      <ButtonBack />
       <ViewRef name="Placeholder-Time" />
     </Composition>
   );
