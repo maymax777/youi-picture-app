@@ -17,9 +17,7 @@ function Playback() {
     };
   }, []);
 
-  const registerUserActivity = (keyEvent) => {
-    console.log('here', keyEvent);
-  };
+  const registerUserActivity = (keyEvent) => {};
 
   return (
     <View style={styles.container}>
