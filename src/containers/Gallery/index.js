@@ -10,7 +10,7 @@ const Result = ({ navigation }) => {
   const { images, loading } = useSelector((state) => state.Unsplash);
 
   const renderItem = ({ item, index }) => {
-    return <Card item={item} key={index} />;
+    return <Card item={item} key={index} navigation={navigation} />;
   };
 
   const onBackPressed = () => {
