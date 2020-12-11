@@ -1,10 +1,5 @@
 import React, { createRef, useEffect } from 'react';
-import {
-  ButtonRef,
-  Composition,
-  TimelineRef,
-  ViewRef,
-} from '@youi/react-native-youi';
+import { Composition, TimelineRef } from '@youi/react-native-youi';
 import styles from '../style';
 import ButtonBack from './ButtonBack';
 import Arrow from './Arrow';
@@ -45,7 +40,7 @@ function PlaybackControls() {
       <TimelineRef name="Out" ref={outTimelineRef} />
 
       <ButtonBack />
-      {/* <Time /> */}
+      <Time />
       <Arrow />
       <PlayPause />
     </Composition>

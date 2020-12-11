@@ -8,9 +8,5 @@ export default function Time() {
     if (inTimelineRef.current) inTimelineRef.current.play();
   });
 
-  return (
-    <TextRef name="Placeholder-Time">
-      <TimelineRef name="In" ref={inTimelineRef} />
-    </TextRef>
-  );
+  return <TextRef name="Placeholder-Time" text="00:00" />;
 }
