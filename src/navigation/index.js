@@ -14,7 +14,7 @@ const rootStack = createSwitchNavigator(
     Playback: { screen: Playback, navigationOptions: {} },
   },
   {
-    initialRouteName: 'Playback',
+    initialRouteName: 'Search',
   },
 );
 
