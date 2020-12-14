@@ -1,4 +1,4 @@
-# You.i Engine One React Native
+# You.i Engine One React Native Picture App
 
 ## 1) Setup your Unsplash account and API keys
 
@@ -43,6 +43,10 @@
 - [ ] Use the FocusManager module to control the focus through React Navigation's NavigationEvents when navigating between screens or displaying the player controls.
 
 ## 5) Run the application on Android
+
+![Image](/screenshot/screenshot_1.png?raw=true)
+![Image](/screenshot/screenshot_2.png?raw=true)
+![Image](/screenshot/screenshot_3.png?raw=true)
 
 ## 6) Self-paced stretch goals
 
