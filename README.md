@@ -2,9 +2,9 @@
 
 ## 1) Setup your Unsplash account and API keys
 
-https://unsplash.com/documentation#search-photos
-https://unsplash.com/developers
-https://unsplash.com/documentation#creating-a-developer-account
+- https://unsplash.com/documentation#search-photos
+- https://unsplash.com/developers
+- https://unsplash.com/documentation#creating-a-developer-account
 
 ## 2) Build a search screen
 
