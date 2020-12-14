@@ -1,3 +1,53 @@
+# You.i Engine One React Native
+
+## 1) Setup your Unsplash account and API keys
+
+https://unsplash.com/documentation#search-photos
+https://unsplash.com/developers
+https://unsplash.com/documentation#creating-a-developer-account
+
+## 2) Build a search screen
+
+- [x] Build a Screen that allows searching unsplash.com (Use this endpoint (GET /search/photos)).
+- [x] Build this screen using JSX.
+- [x] This screen is the application's first screen upon launching.
+- [x] The screen contains a text input that allows entering a search term.
+- [ ] The text input should be focused by default when navigating to this screen.
+- [x] Upon a successful query result which returns one or more image, you will navigate to the next screen. Only scaffold this screen for now.
+- [ ] Upon failure, display an error which states: "No Results Found".
+
+## 3) Build a resuilt screen
+
+- [x] You will build a screen that displays the results of the search in a Grid.
+- [x] Build this screen using JSX.
+      The Grid contains 4 items per row, and an indeterminate amount of rows.
+- [x] Each item in the grid contains a thumbnail of the picture.
+- [x] Each item in the grid also contains a description of the picture.
+- [x] Upon navigating to this page, you must set focus on the Top Left item.
+- [x] You must be able to navigate through the list of items, from left to right, and from top to bottom.
+- [x] If there are elements out of screen, navigating to the bottom will scroll the page and reveal previously hidden elements
+- [x] A currently focused item must have a highlighted border around it to indicate that it is focused.
+
+## 4) Build a video playback screen
+
+- [x] Build a Video Playback screen which uses the Player_VideoRef After Effects composition.
+- [x] Set the VideoRef name to Video-Surface-View so that the correct composition can be retrieved.
+- [x] Users can navigate to this screen from the Results screen, by clicking any result.
+- [x] You will playback the following HLS Stream: The Durian Open Movie Project.
+- [x] Load the Player_Playback-Controls After Effects composition after Player_VideoRef to add controls for the player.
+- [x] When the user clicks a button, display the playback controls by animating both the composition and its children's In / Out timelines when showing / hiding the controls.
+- [x] Update the play / pause button to change its visual state depending on whether the video is paused or not.
+- [ ] When navigating back to the Results Screen, set focus on the original image you had originally clicked on.
+- [x] Hook up the Placeholder-Time ViewRef to display a human readable formatted version of the current video time.
+      Hook up the Btn-Back ButtonRef to navigate back to the previous screen.
+- [ ] Use the FocusManager module to control the focus through React Navigation's NavigationEvents when navigating between screens or displaying the player controls.
+
+## 5) Run the application on Android
+
+## 6) Self-paced stretch goals
+
+---
+
 # You.i Engine One React Native Template App
 
 ## Requirements
